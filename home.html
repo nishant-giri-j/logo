@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Market</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Logo Market</h1>
+        <nav class="nav-links">
+            <a href="upload logo.html">UPLOAD LOGO</a>
+            <a href="view logo.html">VIEW LOGO</a>
+            <a href="review.html">REVIEW</a>
+        </nav>
+    </header>
+
+    <div class="homepage">
+        <div class="welcome">
+            <h2>Welcome to Logo Market</h2>
+            <p>Upload, Review, Buy, and Sell Logos with Ease</p>
+        </div>
+        
+<!-- Inside home.html -->
+<div class="search-section">
+    <input 
+        type="text" 
+        id="search-bar" 
+        placeholder="Search for logos..."
+        oninput="showSuggestions(this.value)"
+    />
+    <button class="search-btn" onclick="searchLogos()">Search</button>
+    <div id="suggestions"></div>
+</div>
+
+<script>
+    function searchLogos() {
+        const query = document.getElementById('search-bar').value;
+        // Redirect to the view logo page with the search query as a URL parameter
+        window.location.href = `view%20logo.html?search=${encodeURIComponent(query)}`;
+    }
+</script>
+
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>
+                At Logo Market, we bring designers and businesses together to create, 
+                buy, and sell unique logos. Whether you're a designer looking to showcase 
+                your creativity or a business in need of the perfect logo, we are here 
+                to make the process smooth and enjoyable. Explore our wide range of logos, 
+                review designs, and find exactly what you're looking for!
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Logo Market. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

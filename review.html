@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Reviews</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Logo Market</h1>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="upload logo.html">UPLOAD LOGO</a>
+            <a href="view logo.html">VIEW LOGO</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="search-bar" 
+                placeholder="Search for logos..."
+            />
+            <button class="search-btn" onclick="searchLogo()">Search</button> <!-- Button triggers the search -->
+            <div id="suggestions"></div> <!-- Suggestions will appear below the button -->
+        </div>
+
+        <div class="review-section">
+            <textarea id="comment-box" placeholder="Write your review here..."></textarea>
+            <div class="star-rating" id="star-rating">
+                <span data-value="1" class="star">&#9733;</span>
+                <span data-value="2" class="star">&#9733;</span>
+                <span data-value="3" class="star">&#9733;</span>
+                <span data-value="4" class="star">&#9733;</span>
+                <span data-value="5" class="star">&#9733;</span>
+            </div>
+            <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+        </div>
+
+        <div class="reviews-container" id="reviews-container">
+            <h2>Reviews</h2>
+            <div id="reviews-list"></div>
+        </div>
+    </main>
+
+    <script src="review.js"></script>
+</body>
+</html>

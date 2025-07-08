@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Logo</title>
+    <link rel="stylesheet" href="upload logo.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Logo Market</h1>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="view logo.html">VIEW LOGO</a>
+            <a href="review.html">REVIEW</a>
+        </nav>
+    </header>
+
+    <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <h2>Upload Your Logo</h2>
+        <form id="upload-form">
+            <input type="file" id="logo-input" accept="image/*" required>
+            <input type="text" id="logo-name" placeholder="Enter logo name" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Logo Market. All rights reserved.</p>
+    </footer>
+
+    <script src="upload logo.js"></script>
+</body>
+</html>

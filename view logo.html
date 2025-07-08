@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Logos</title>
+    <link rel="stylesheet" href="view logo.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Logo Market</h1>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="upload logo.html">UPLOAD LOGO</a>
+            <a href="review.html">REVIEW</a>
+        </nav>
+    </header>
+
+    <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <h2>View Uploaded Logos</h2>
+        <div id="logos-container" class="logos-container"></div>
+    </div>
+
+    <!-- Modal for zoom -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" class="modal-image" alt="">
+        <p id="modal-caption" class="modal-caption"></p>
+        <div class="modal-content">  
+        <button id="delete-button" class="delete-button" onclick="deleteLogo()">Delete Logo</button>
+        <a id="download-button" class="download-button" href="#" target="_blank">Download Logo</a> <!-- New Download Button -->
+    </div>
+    </div>
+
+    <script src="view logo.js"></script>
+</body>
+</html>

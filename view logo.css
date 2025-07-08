@@ -1,0 +1,188 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow-y: auto; /* Allow vertical scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Video Background */
+.video-bg video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    margin-top: 10%;
+    z-index: 1;
+    padding-bottom: 50px; /* Ensure there's space at the bottom for scrolling */
+}
+
+.content h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Grid for Logos */
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    z-index: 1;
+    max-height: calc(100vh - 150px); /* Limit the height to make it scrollable */
+    overflow-y: auto; /* Allow the logos container to scroll */
+}
+
+/* Logo Item in White Column */
+.logo-item {
+    text-align: center;
+    background-color: white;  /* White background for the logo item */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Image Styling */
+.logo-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Logo Name in Black */
+.logo-item p {
+    color: black;  /* Change text color to black for the name */
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-image {
+    max-width: 80%;
+    max-height: 80%;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.modal-caption {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Modal Buttons Container */
+.modal-content {
+    display: flex;
+    flex-direction: column; /* This ensures the buttons are stacked vertically */
+    align-items: center;
+    justify-content: center;
+}
+/* Existing Delete Button Styles */
+.delete-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* Adjusted Download Button Styles */
+.download-button {
+    display: inline-block;
+    margin-top: 20px; /* Change this to 20px (instead of 110px) to position it below the delete button */
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: darkblue;
+}
